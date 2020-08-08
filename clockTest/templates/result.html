@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收购马氏家族打卡系统</title>
+    <link rel="stylesheet" href="{% static 'clocka/assets/css/index.css' %}">
+</head>
+<body>
+<nav>
+    <ul class="nav">
+        <li><a href="/index/">首页</a></li>
+        <li><a href="/login/">登录</a></li>
+        <li><a href="/registration/">注册</a></li>
+        <li><a href="/select/">查看打卡记录</a></li>
+    </ul>
+</nav>
+<div align="center" height="200">
+<table bgcolor="#ffdab9" border="1" align="center" width="600" cellpadding="2px" height="200" >
+    <tr>
+        <th>打卡详情</th>
+    </tr>
+    <tr>
+        <th>
+        {% for item in result %}
+            <p>{{ item }}</p>
+        {% endfor %}
+        </th>
+    </tr>
+</table>
+</div>
+</body>
+</html>
